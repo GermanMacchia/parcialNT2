@@ -86,6 +86,15 @@
                   <td>{{ alumno.nombre + ' ' + alumno.apellido}}</td>
                   <td>{{ alumno.nota }}</td>
               </tr>
+              
+              <tr>
+                <td>
+                  Promedio
+                </td>
+                <td>
+
+                </td>
+              </tr>
           </table>
         </div>    
     </div>
@@ -114,15 +123,15 @@
     },
     methods: {
       getInicialData(){
-        return{
+        return {
           nombre: '',
           apellido: '',
           nota: ''
         }
       },
       enviar(){
-        this.alumnos.push({...this.formData})
-        this.formData = this.getInicialData()
+        this.alumnos.push({...this.formData});
+        this.formData = this.getInicialData();
         this.formState._reset()
       }
     },
@@ -130,8 +139,6 @@
 
     }
 }
-
-
 </script>
 
 <style scoped lang="css">
